@@ -1,0 +1,67 @@
+
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TU Parking Map</title>
+
+    <link rel="stylesheet" href="styles.css">
+
+    <link
+        rel="stylesheet"
+        href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"
+    >
+</head>
+<body>
+    <header class="header">
+        <h1>TU Parking Map</h1>
+        <p>แผนที่ค้นหาที่จอดรถ มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</p>
+    </header>
+
+    <main class="container">
+        <h2>ค้นหาที่จอดรถของคุณ</h2>
+        <p>ค้นหาลานจอดรถที่สะดวกสำหรับคุณภายในมหาวิทยาลัย</p>
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="พิมพ์ชื่อลานจอดรถ..."
+            aria-label="ค้นหาลานจอดรถ"
+        >
+
+        <section class="parking-layout">
+
+            
+            <div class="parking-list">
+                <h3>รายการลานจอดรถ</h3>
+                <div id="parkingResults"></div>
+            </div>
+            <div id="map"></div>
+
+            <div class="gps-controls">
+             <button id="startGpsButton" type="button">
+        ค้นหาตำแหน่งของคุณ
+             </button>
+
+             <button id="stopGpsButton" type="button" disabled>
+        หยุดติดตาม
+              </button>  
+             <p id="gpsStatus" role="status">
+        ยังไม่ได้เริ่มติดตามตำแหน่ง
+              </p>
+            </div> 
+            
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>TU Parking Map | มหาวิทยาลัยธรรมศาสตร์ ศูนย์รังสิต</p>
+    </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    
+    <script src="script.js"></script>
+</body>
+</html>

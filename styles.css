@@ -1,0 +1,178 @@
+/* ตั้งค่าพื้นฐานของเว็บไซต์ */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f3f6f4;
+    color: #26352f;
+}
+
+/* ส่วนหัวเว็บไซต์ */
+.header {
+    background-color: #c3002f;
+    color: white;
+    text-align: center;
+    padding: 40px 20px;
+}
+
+/* พื้นที่เนื้อหาหลัก */
+.container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: white;
+    border-radius: 12px;
+    text-align: center;
+}
+
+/* ปุ่มค้นหาที่จอดรถ */
+button {
+    background-color: #c3002f;
+    color: white;
+    border: none;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+/* เปลี่ยนสีปุ่มเมื่อเอาเมาส์ไปวาง */
+button:hover {
+    background-color: #72001b;
+}
+
+/* ส่วนท้ายเว็บไซต์ */
+.footer {
+    text-align: center;
+    padding: 20px;
+    color: #617067;
+    font-size: 14px;
+}
+
+/* ช่องค้นหาลานจอดรถ */
+#searchInput {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 600px;
+    padding: 14px;
+    margin: 10px 0 25px;
+    border: 1px solid #cbd5ce;
+    border-radius: 8px;
+    font-size: 16px;
+}
+
+/* แบ่งหน้าออกเป็นรายการกับแผนที่ */
+.parking-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+    text-align: left;
+}
+
+/* กล่องรายการลานจอดรถ */
+.parking-list {
+    padding: 20px;
+    background-color: #f7f9f7;
+    border-radius: 9px;
+}
+
+/* การ์ดลานจอดรถแต่ละแห่ง */
+.parking-card {
+    padding: 15px;
+    margin-bottom: 12px;
+    background-color: white;
+    border: 1px solid #e0e7e1;
+    border-radius: 8px;
+}
+
+/* พื้นที่แผนที่จำลอง */
+.map-placeholder {
+    min-height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #e7eee7;
+    text-align: center;
+}
+
+/* ข้อความในพื้นที่แผนที่ */
+.map-icon {
+    font-size: 40px;
+}
+
+/* ปรับให้ใช้งานบนมือถือ */
+@media (max-width: 650px) {
+    .parking-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .map-placeholder {
+        min-height: 280px;
+    }
+}
+/* พื้นที่แสดงแผนที่ Leaflet */
+#map {
+    width: 100%;
+    height: 450px;
+    border-radius: 10px;
+    border: 1px solid #d1d5db;
+    z-index: 1;
+}
+
+.parking-card h4 {
+    margin-top: 0;
+    margin-bottom: 8px;
+    color: #c3002f;
+}
+
+.parking-card p {
+    line-height: 1.6;
+    margin: 8px 0;
+}
+
+.parking-card button {
+    margin: 8px 0;
+    padding: 9px 14px;
+    border: none;
+    border-radius: 6px;
+    background-color: #c3002f;
+    color: white;
+    cursor: pointer;
+}
+
+.parking-card button:hover {
+    background-color: #72001b;
+}
+
+.parking-card a {
+    display: inline-block;
+    margin: 6px 0;
+    color: #c3002f;
+    text-decoration: underline;
+}
+
+.gps-controls {
+    margin: auto;
+    
+}
+
+.gps-controls button {
+    
+    margin: 10px 6px 4px 0;
+    padding: 10px 14px;
+    border-radius: 6px;
+    background: #c3002f;
+    color: white;
+    cursor: pointer;
+}
+
+.gps-controls button:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+#gpsStatus {
+    font-size: 15px;
+    line-height: 0.5;
+}
